@@ -27,10 +27,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/music" />
       <recent name="$PROJECT_DIR$" />
@@ -47,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668953394573</updated>
       <workItem from="1668953394577" duration="1845000" />
-      <workItem from="1668956266239" duration="3653000" />
+      <workItem from="1668956266239" duration="4186000" />
     </task>
     <servers />
   </component>
