@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LOVE YOU</title>
-    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>LOVE YOU</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -15,11 +14,11 @@
     <div class="row col-md-6">
         <div class="row question">
             <div class="col-md-6 col-xs-12">
-                <p style="line-height: 50px;font-size: 10px;">“小姐姐，我观察你很久了”</p>
+                <p style="line-height: 50px;font-size: 15px;">“小姐姐，我观察你很久了”</p>
                 <p style="line-height: 50px;font-size: 20px;">做我女朋友好不好？</p>
             </div>
             <div class="col-md-6 col-xs-12">
-                <img src="http://img.mp.sohu.com/q_mini,c_zoom,w_640/upload/20170630/a93fa9d48002461c867f7ea12569617a.jpg" alt="" style="height: 200px;">
+                <img src="./img/showlove.jpg" alt="" style="height: 200px;">
             </div>
         </div>
         <div class="row question" style="margin-top: 20px;">
@@ -30,71 +29,71 @@
                 <button type="button" class="btn btn-danger" style="width: 80%" id="ok">不好</button>
             </div>
         </div>
-        <div class="col-md-12 col-xs-12 hide" id="success">
-            <img src='http://img3.imgtn.bdimg.com/it/u=860430458,2694681543&fm=214&gp=0.jpg' alt="" style="width: 100%;">
-        </div>
     </div>
 </div>
 
-<div class="row col-md-3"></div>
+<div class="row col-md-3">
+    <embed src="./music/汪苏泷-by2-有点甜.mp3" width=0 height=0 type=audio/mpeg loop="true" autostart="true"/>
+<!--    <embed src="./music/曹格-梁山伯与茱丽叶.mp3" width=0 height=0 type=audio/mpeg loop="true" autostart="true">-->
+<!--    <embed src="./music/林俊杰-豆浆油条.mp3" width=0 height=0 type=audio/mpeg loop="true" autostart="true">-->
+<!--    <embed src="./music/陶喆-流沙.mp3" width=0 height=0 type=audio/mpeg loop="true" autostart="true">-->
+</div>
 
 <script>
-  var i = 1;
-  var ok = false;
-  $(document).ready(function () {
-    (function () {
-      //先判断是否为微信浏览器
-      var ua = window.navigator.userAgent.toLowerCase();
-      if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-        //重写alert方法，alert()方法重写，不能传多余参数
-        window.alert = function (name) {
-          var iframe = document.createElement("IFRAME");
-          iframe.style.display = "none";
-          iframe.setAttribute("src", 'data:text/plain');
-          document.documentElement.appendChild(iframe);
-          window.frames[0].window.alert(name);
-          iframe.parentNode.removeChild(iframe);
-        }
-      }
-    })();
-    $("#no").click(function () {
-      alert("真的吗？你答应了？");
-      alert("给我发消息吧，爱你");
-      $(".question").addClass('hide');
-      $("#success").removeClass('hide');
-      ok = true;
+    var i = 1;
+    $(document).ready(function () {
+        (function () {
+            //先判断是否为微信浏览器
+            var ua = window.navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                //重写alert方法，alert()方法重写，不能传多余参数
+                window.alert = function (name) {
+                    var iframe = document.createElement("IFRAME");
+                    iframe.style.display = "none";
+                    iframe.setAttribute("src", 'data:text/plain');
+                    document.documentElement.appendChild(iframe);
+                    window.frames[0].window.alert(name);
+                    iframe.parentNode.removeChild(iframe);
+                }
+            }
+        })();
+        $("#no").click(function () {
+            alert("真的吗？你答应了？");
+            alert("给我发消息吧，爱你呦！");
+            // $(".question").addClass('hide');
+            // $("#success").removeClass('hide');
+            // ok = true;
+        });
+        $("#ok").click(function () {
+            switch (i) {
+                case 1:
+                    alert("工资上交！");
+                    break;
+                case 2:
+                    alert("家务全包！");
+                    break;
+                case 3:
+                    alert("每天给你做好吃的😋！");
+                    break;
+                case 4:
+                    alert("房产证写你的名字！");
+                    break;
+                case 5:
+                    alert("保大！");
+                    break;
+                case 6:
+                    alert("我妈会游泳！");
+                    break;
+                case 7:
+                    alert("不跟你吵架，会撒娇、会卖萌！");
+                    break;
+                default:
+                    alert("答应我吧！");
+            }
+            i++;
+        });
     });
-    $("#ok").click(function () {
-      switch (i) {
-        case 1:
-          alert("工资上交");
-          break;
-        case 2:
-          alert("家务全包");
-          break;
-        case 3:
-          alert("房产证写你的名字");
-          break;
-        case 4:
-          alert("保大");
-          break;
-        case 5:
-          alert("我妈会游泳");
-          break;
-        case 6:
-          alert("不跟你吵架，会撒娇 会卖萌");
-          break;
-        default:
-          alert("答应我吧");
-      }
-      i++;
-    });
-  });
 </script>
-<audio id="bgMusic" controls="controls" autoplay="autoplay" preload="auto" loop="loop">
-	<source src="./汪苏泷/by2-有点甜.mp3" type="audio/mpeg" />
-	<source src="./曹格-梁山伯与茱丽叶.mp3" type="audio/mpeg" />
-	<source src="./林俊杰-豆浆油条.mp3" type="audio/mpeg" />
-</audio>
+
 </body>
 </html>
